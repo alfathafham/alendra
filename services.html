@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Layanan Alendra - Solusi IT Profesional</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../assets/logo.png" type="image/png">
+</head>
+<body>
+
+  <!-- Header dengan logo -->
+  <header class="navbar">
+    <div class="container">
+      <a href="../../index.html" class="logo">
+        <img src="../assets/logo.png" alt="Alendra IT Solutions" />
+        <span>Alendra IT</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../../index.html"><i class="fas fa-home"></i> Beranda</a></li>
+          <li><a href="../about.html"><i class="fas fa-info-circle"></i> Tentang</a></li>
+          <li><a href="../services.html"><i class="fas fa-laptop-code"></i> Layanan</a></li>
+          <li><a href="../contact.html"><i class="fas fa-envelope"></i> Kontak</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Section Layanan -->
+  <section class="layanan">
+    <div class="layar-dalam">
+      <h2>Layanan Kami</h2>
+      <p class="subtitle">Solusi teknologi terbaik untuk kebutuhan bisnis Anda</p>
+
+      <div class="grid-layanan" id="layanan-list">
+        <!-- Layanan akan di-generate otomatis oleh JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Script Data Layanan -->
+  <script>
+    const layananData = [
+      { icon: "fas fa-laptop-house", title: "Sewa Perangkat IT", desc: "Layanan penyewaan perangkat IT lengkap untuk berbagai kebutuhan perusahaan", link: "../pages/services/sewa-perangkat.html" },
+      { icon: "fas fa-tools", title: "Pemeliharaan & Service", desc: "Perawatan dan perbaikan perangkat IT oleh teknisi berpengalaman", link: "../pages/services/pemeliharaan-service.html" },
+      { icon: "fas fa-network-wired", title: "Pemasangan Jaringan", desc: "Instalasi jaringan kabel dan nirkabel untuk berbagai skala bisnis", link: "../pages/services/pemasangan-jaringan.html" },
+      { icon: "fas fa-code", title: "Pembuatan Aplikasi", desc: "Pengembangan aplikasi custom untuk mendukung operasional bisnis", link: "../pages/services/pembuatan-aplikasi.html" },
+      { icon: "fas fa-print", title: "Printer & Fotokopi", desc: "Solusi lengkap kebutuhan cetak dan duplikasi dokumen", link: "../pages/services/printer-fotokopi.html" },
+      { icon: "fas fa-battery-full", title: "UPS & Power", desc: "Perlindungan perangkat dari gangguan listrik", link: "../pages/services/ups.html" },
+      { icon: "fas fa-server", title: "Server & Storage", desc: "Solusi penyimpanan data dan server untuk perusahaan", link: "../pages/services/server-blade.html" },
+      { icon: "fas fa-tv", title: "Proyektor & TV", desc: "Perangkat presentasi profesional untuk meeting dan event", link: "../pages/services/proyektor-tv.html" },
+      { icon: "fas fa-volume-up", title: "Sound System", desc: "Sistem audio untuk ruang meeting dan acara khusus", link: "../pages/services/soundsystem.html" },
+      { icon: "fas fa-fan", title: "AC Standing", desc: "Solusi pendingin ruangan portabel", link: "../pages/services/ac-standing.html" },
+      { icon: "fas fa-barcode", title: "Barcode System", desc: "Sistem pemindaian barcode untuk inventaris", link: "../pages/services/barcode-scanner.html" }
+    ];
+
+    const layananList = document.getElementById("layanan-list");
+
+    layananData.forEach((item) => {
+      layananList.innerHTML += `
+        <div class="item-layanan">
+          <a href="${item.link}">
+            <i class="${item.icon}"></i>
+            <h3>${item.title}</h3>
+            <p>${item.desc}</p>
+          </a>
+        </div>
+      `;
+    });
+  </script>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
