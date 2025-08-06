@@ -3,26 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Layanan Alendra - Solusi IT Profesional</title>
+  <title>Hubungi Kami - Alendra IT Solutions | Layanan IT Profesional</title>
+  <meta name="description" content="Hubungi tim Alendra IT Solutions untuk solusi penyewaan perangkat IT, instalasi jaringan, dan pengembangan aplikasi profesional.">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/style.css" />
   <link rel="icon" href="../assets/logo.png" type="image/png">
 </head>
 <body>
-
-  <!-- Header dengan logo -->
+  <!-- Header/Navbar -->
   <header class="navbar">
     <div class="container">
-      <a href="../../index.html" class="logo">
+      <a href="../index.html" class="logo">
         <img src="../assets/logo.png" alt="Alendra IT Solutions" />
         <span>Alendra IT</span>
       </a>
       <nav>
         <ul class="nav-links">
-          <li><a href="../../index.html"><i class="fas fa-home"></i> Beranda</a></li>
-          <li><a href="../about.html"><i class="fas fa-info-circle"></i> Tentang</a></li>
-          <li><a href="../services.html"><i class="fas fa-laptop-code"></i> Layanan</a></li>
-          <li><a href="../contact.html"><i class="fas fa-envelope"></i> Kontak</a></li>
+          <li><a href="../index.html"><i class="fas fa-home"></i> Beranda</a></li>
+          <li><a href="about.html"><i class="fas fa-info-circle"></i> Tentang</a></li>
+          <li><a href="services.html"><i class="fas fa-laptop-code"></i> Layanan</a></li>
+          <li><a href="contact.html" class="active"><i class="fas fa-envelope"></i> Kontak</a></li>
         </ul>
         <div class="hamburger">
           <span></span>
@@ -33,49 +33,187 @@
     </div>
   </header>
 
-  <!-- Section Layanan -->
-  <section class="layanan">
-    <div class="layar-dalam">
-      <h2>Layanan Kami</h2>
-      <p class="subtitle">Solusi teknologi terbaik untuk kebutuhan bisnis Anda</p>
+  <!-- Hero Section -->
+  <section class="contact-hero">
+    <div class="container">
+      <h1><i class="fas fa-headset"></i> Hubungi Kami</h1>
+      <p>Tim support kami siap membantu kebutuhan IT bisnis Anda</p>
+    </div>
+  </section>
 
-      <div class="grid-layanan" id="layanan-list">
-        <!-- Layanan akan di-generate otomatis oleh JS -->
+  <!-- Main Content -->
+  <main class="contact-content">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Contact Info -->
+        <section class="contact-info">
+          <h2><i class="fas fa-map-marker-alt"></i> Informasi Kontak</h2>
+          
+          <div class="contact-card">
+            <i class="fas fa-building"></i>
+            <div>
+              <h3>Kantor Pusat</h3>
+              <p>Jl. Teknologi No. 123, Gedung Inovasi Lt. 5<br>Jakarta Selatan 12345</p>
+            </div>
+          </div>
+          
+          <div class="contact-card">
+            <i class="fas fa-clock"></i>
+            <div>
+              <h3>Jam Operasional</h3>
+              <p>Senin - Jumat: 08.00 - 17.00 WIB<br>Sabtu: 08.00 - 14.00 WIB</p>
+            </div>
+          </div>
+          
+          <div class="contact-card">
+            <i class="fas fa-phone-alt"></i>
+            <div>
+              <h3>Telepon</h3>
+              <p><a href="tel:+62211234567">(021) 1234567</a><br>
+              <a href="tel:+6281234567890">0812-3456-7890</a> (WhatsApp)</p>
+            </div>
+          </div>
+          
+          <div class="contact-card">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h3>Email</h3>
+              <p><a href="mailto:info@alendra-it.com">info@alendra-it.com</a><br>
+              <a href="mailto:support@alendra-it.com">support@alendra-it.com</a></p>
+            </div>
+          </div>
+          
+          <div class="social-media">
+            <h3>Media Sosial</h3>
+            <div class="social-links">
+              <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="social-btn"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="contact-form">
+          <h2><i class="fas fa-paper-plane"></i> Kirim Pesan</h2>
+          <form id="contactForm" action="#" method="POST">
+            <div class="form-group">
+              <label for="name">Nama Lengkap</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="company">Perusahaan</label>
+              <input type="text" id="company" name="company">
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">Nomor Telepon</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+            
+            <div class="form-group">
+              <label for="service">Layanan yang Diminati</label>
+              <select id="service" name="service">
+                <option value="">Pilih Layanan</option>
+                <option value="sewa">Sewa Perangkat IT</option>
+                <option value="jaringan">Instalasi Jaringan</option>
+                <option value="aplikasi">Pembuatan Aplikasi</option>
+                <option value="lainnya">Lainnya</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Pesan</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">
+              <i class="fas fa-paper-plane"></i> Kirim Pesan
+            </button>
+          </form>
+        </section>
+      </div>
+
+      <!-- Map Section -->
+      <section class="map-section">
+        <h2><i class="fas fa-map-marked-alt"></i> Lokasi Kami</h2>
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.81956135000001!3d-6.194741999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTEnNDEuMSJTIDEwNsKwNDknMTAuNCJF!5e0!3m2!1sen!2sid!4v1620000000000!5m2!1sen!2sid" 
+                  width="100%" 
+                  height="450" 
+                  style="border:0;" 
+                  allowfullscreen="" 
+                  loading="lazy">
+          </iframe>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Butuh Bantuan Cepat?</h2>
+        <p>Hubungi tim support kami yang siap membantu 24/7 untuk kebutuhan darurat</p>
+        <div class="cta-buttons">
+          <a href="tel:+6281234567890" class="btn-primary"><i class="fas fa-phone-alt"></i> Telepon Sekarang</a>
+          <a href="https://wa.me/6281234567890" class="btn-secondary"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Script Data Layanan -->
-  <script>
-    const layananData = [
-      { icon: "fas fa-laptop-house", title: "Sewa Perangkat IT", desc: "Layanan penyewaan perangkat IT lengkap untuk berbagai kebutuhan perusahaan", link: "../pages/services/sewa-perangkat.html" },
-      { icon: "fas fa-tools", title: "Pemeliharaan & Service", desc: "Perawatan dan perbaikan perangkat IT oleh teknisi berpengalaman", link: "../pages/services/pemeliharaan-service.html" },
-      { icon: "fas fa-network-wired", title: "Pemasangan Jaringan", desc: "Instalasi jaringan kabel dan nirkabel untuk berbagai skala bisnis", link: "../pages/services/pemasangan-jaringan.html" },
-      { icon: "fas fa-code", title: "Pembuatan Aplikasi", desc: "Pengembangan aplikasi custom untuk mendukung operasional bisnis", link: "../pages/services/pembuatan-aplikasi.html" },
-      { icon: "fas fa-print", title: "Printer & Fotokopi", desc: "Solusi lengkap kebutuhan cetak dan duplikasi dokumen", link: "../pages/services/printer-fotokopi.html" },
-      { icon: "fas fa-battery-full", title: "UPS & Power", desc: "Perlindungan perangkat dari gangguan listrik", link: "../pages/services/ups.html" },
-      { icon: "fas fa-server", title: "Server & Storage", desc: "Solusi penyimpanan data dan server untuk perusahaan", link: "../pages/services/server-blade.html" },
-      { icon: "fas fa-tv", title: "Proyektor & TV", desc: "Perangkat presentasi profesional untuk meeting dan event", link: "../pages/services/proyektor-tv.html" },
-      { icon: "fas fa-volume-up", title: "Sound System", desc: "Sistem audio untuk ruang meeting dan acara khusus", link: "../pages/services/soundsystem.html" },
-      { icon: "fas fa-fan", title: "AC Standing", desc: "Solusi pendingin ruangan portabel", link: "../pages/services/ac-standing.html" },
-      { icon: "fas fa-barcode", title: "Barcode System", desc: "Sistem pemindaian barcode untuk inventaris", link: "../pages/services/barcode-scanner.html" }
-    ];
-
-    const layananList = document.getElementById("layanan-list");
-
-    layananData.forEach((item) => {
-      layananList.innerHTML += `
-        <div class="item-layanan">
-          <a href="${item.link}">
-            <i class="${item.icon}"></i>
-            <h3>${item.title}</h3>
-            <p>${item.desc}</p>
-          </a>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>Alendra IT Solutions</h3>
+          <p>Menyediakan solusi IT lengkap untuk bisnis dan instansi sejak 2020.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+          </div>
         </div>
-      `;
-    });
-  </script>
+        
+        <div class="footer-col">
+          <h3>Layanan</h3>
+          <ul>
+            <li><a href="services/sewa-perangkat.html"><i class="fas fa-chevron-right"></i> Sewa Perangkat IT</a></li>
+            <li><a href="services/pemasangan-jaringan.html"><i class="fas fa-chevron-right"></i> Instalasi Jaringan</a></li>
+            <li><a href="services/pembuatan-aplikasi.html"><i class="fas fa-chevron-right"></i> Pembuatan Aplikasi</a></li>
+            <li><a href="services.html"><i class="fas fa-chevron-right"></i> Semua Layanan</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Kontak</h3>
+          <ul class="contact-info">
+            <li><i class="fas fa-map-marker-alt"></i> Jl. Teknologi No. 123, Jakarta</li>
+            <li><i class="fas fa-phone"></i> (021) 1234567</li>
+            <li><i class="fas fa-mobile-alt"></i> 0812-3456-7890</li>
+            <li><i class="fas fa-envelope"></i> info@alendra-it.com</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Alendra IT Solutions. Semua Hak Dilindungi.</p>
+      </div>
+    </div>
+  </footer>
 
   <script src="../js/main.js"></script>
 </body>
 </html>
+
